@@ -9,27 +9,28 @@
 
 body {
   height: 95vh;
-  width: 100%;
   display: flex;
-  justify-content: center;
-  margin-left: 2%;
+  justify-content: flex-start;
+  margin-left: 20px;
   align-items: center;
+  background-image: url(./yugi.jpg);
   background-size: cover;
 }
 
 #demo {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
+  gap: 20px;
 }
 
-.film {
+.card {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 180px;
+  height: 400px;
 }
 
-.image {
+.card img {
   width: 100%;
   align-self: center;
   box-shadow: 1px 1px 10px #7f8fa6;
@@ -37,4 +38,20 @@ body {
 
 .title {
   font-size: 2rem;
+}
+
+.type {
+  align-self: flex-start;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.type::before {
+  content: '✡️';  
+  font-style: normal;
+  margin-right: 2px;
+}
+
+.description {
+  margin-top: 10px;
 }
